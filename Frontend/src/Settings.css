@@ -1,0 +1,123 @@
+.settings-shell {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: var(--app-bg);
+}
+
+.settings-card {
+    width: min(100%, 480px);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 16px 40px var(--shadow);
+}
+
+.settings-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.settings-header h1 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: var(--text);
+}
+
+.settings-back {
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text);
+    padding: 8px 12px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.settings-back:hover {
+    background: var(--surface-4);
+}
+
+.settings-section {
+    border-top: 1px solid var(--border);
+    padding-top: 16px;
+    margin-top: 16px;
+}
+
+.settings-section h2 {
+    margin: 0 0 12px;
+    font-size: 1rem;
+    color: var(--text);
+}
+
+.settings-options {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.settings-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    color: var(--text);
+}
+
+.settings-option:hover {
+    background: var(--surface-4);
+}
+
+.settings-option.active {
+    background: var(--surface-3);
+    border-color: var(--border-strong);
+}
+
+.settings-option input {
+    margin: 0;
+    accent-color: var(--accent);
+}
+
+.settings-danger {
+    width: 100%;
+    padding: 12px 14px;
+    border: none;
+    border-radius: 999px;
+    background: #b91c1c;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.settings-danger:hover {
+    background: #991b1b;
+    transform: translateY(-1px);
+}
+
+.settings-danger:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.settings-status {
+    margin-top: 10px;
+    font-size: 0.92rem;
+}
+
+.settings-status.success {
+    color: #86efac;
+}
+
+.settings-status.error {
+    color: #fda4af;
+}
