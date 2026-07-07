@@ -4,6 +4,7 @@ import { MyContext } from "./MyContext.jsx";
 import { useContext, useState, useEffect, useRef } from "react";
 import { ScaleLoader } from "react-spinners";
 import profileImg from "./assets/profile.png";
+import { API_URL } from "./config.js";
 import { useAuth } from "./context/AuthContext.jsx";
 
 function ChatWindow() {
@@ -32,7 +33,7 @@ function ChatWindow() {
         };
 
         try {
-            const response = await fetch("http://localhost:8080/api/chat", options);
+            const response = await fetch(`${API_URL}/api/chat`, options);
             const res = await response.json();
             console.log(res);
             setReply(res.reply);

@@ -3,9 +3,7 @@ import { useContext, useEffect } from "react";
 import { MyContext } from "./MyContext.jsx";
 import { v1 as uuidv1 } from "uuid";
 import blacklogo from "./assets/blacklogo.png";
-
-// Replace this with your Render backend URL
-const API_URL = "https://YOUR-BACKEND-NAME.onrender.com";
+import { API_URL } from "./config.js";
 
 function Sidebar() {
     const {

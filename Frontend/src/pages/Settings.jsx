@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { v1 as uuidv1 } from 'uuid';
 import { MyContext } from '../MyContext.jsx';
 import '../Settings.css';
+import { API_URL } from '../config.js';
 
 function Settings() {
     const navigate = useNavigate();
@@ -31,7 +32,7 @@ function Settings() {
         setStatusMessage('');
 
         try {
-            const response = await fetch('http://localhost:8080/api/thread', { method: 'DELETE' });
+            const response = await fetch(`${API_URL}/api/thread`, { method: 'DELETE' });
             const data = await response.json();
 
             if (!response.ok) {
