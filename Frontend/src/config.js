@@ -1,2 +1,3 @@
 // Centralized API URL for frontend API calls
-export const API_URL = "https://bytechat-xw3w.onrender.com";
+const rawApiUrl = import.meta.env.VITE_API_URL || "https://bytechat-xw3w.onrender.com";
+export const API_URL = rawApiUrl.replace(/\/$/, "");
